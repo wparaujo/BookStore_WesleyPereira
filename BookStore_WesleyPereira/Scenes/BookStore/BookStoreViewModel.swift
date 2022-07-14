@@ -11,6 +11,6 @@ protocol BookStoreViewModelProtocol {
     
 }
 
-final class BookStoreViewModelProtocol: BookStoreViewModelProtocol {
+final class BookStoreViewModel: BookStoreViewModelProtocol {
     
 }

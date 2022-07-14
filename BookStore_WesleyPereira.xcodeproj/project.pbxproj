@@ -21,6 +21,7 @@
 		02E80317287FB6BE004987C0 /* BookStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E80316287FB6BE004987C0 /* BookStoreView.swift */; };
 		02E8031C287FB77C004987C0 /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8031B287FB77C004987C0 /* CodableView.swift */; };
 		02E80320287FB94A004987C0 /* BookStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8031F287FB94A004987C0 /* BookStoreViewController.swift */; };
+		02E80323287FBA77004987C0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E80322287FBA77004987C0 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		02E80316287FB6BE004987C0 /* BookStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreView.swift; sourceTree = "<group>"; };
 		02E8031B287FB77C004987C0 /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
 		02E8031F287FB94A004987C0 /* BookStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreViewController.swift; sourceTree = "<group>"; };
+		02E80322287FBA77004987C0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		02E802E1287FAF16004987C0 /* BookStore_WesleyPereira */ = {
 			isa = PBXGroup;
 			children = (
+				02E80321287FBA54004987C0 /* Core */,
 				02E8031A287FB75C004987C0 /* UI */,
 				02E80318287FB720004987C0 /* Scenes */,
 				02E802E2287FAF16004987C0 /* AppDelegate.swift */,
@@ -164,6 +167,14 @@
 				02E8031B287FB77C004987C0 /* CodableView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		02E80321287FBA54004987C0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				02E80322287FBA77004987C0 /* Observable.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				02E80315287FB693004987C0 /* BookStoreViewModel.swift in Sources */,
 				02E80313287FB3C3004987C0 /* BookStoreModel.swift in Sources */,
 				02E802E7287FAF16004987C0 /* ViewController.swift in Sources */,
+				02E80323287FBA77004987C0 /* Observable.swift in Sources */,
 				02E80317287FB6BE004987C0 /* BookStoreView.swift in Sources */,
 				02E802E3287FAF16004987C0 /* AppDelegate.swift in Sources */,
 				02E802E5287FAF16004987C0 /* SceneDelegate.swift in Sources */,
