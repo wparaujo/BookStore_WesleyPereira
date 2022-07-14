@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let initialViewController = BookStoreViewController()
+        let initialViewController = BookStoreFactory.make()
         let navigationController = UINavigationController(
             rootViewController: initialViewController
         )

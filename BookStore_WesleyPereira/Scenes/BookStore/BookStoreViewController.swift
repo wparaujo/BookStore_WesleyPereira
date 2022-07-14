@@ -8,6 +8,7 @@
 import UIKit
 
 class BookStoreViewController: UIViewController {
+    let viewModel: BookStoreViewModelProtocol
     
     override func loadView() {
         view = BookStoreView()
@@ -15,5 +16,15 @@ class BookStoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    init(viewModel: BookStoreViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
