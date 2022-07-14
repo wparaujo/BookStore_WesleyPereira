@@ -8,6 +8,10 @@
 import UIKit
 
 class BookStoreViewController: UIViewController {
+    
+    override func loadView() {
+        view = BookStoreView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
