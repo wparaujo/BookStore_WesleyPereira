@@ -16,6 +16,7 @@
 		02E802FA287FAF1B004987C0 /* BookStore_WesleyPereiraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E802F9287FAF1B004987C0 /* BookStore_WesleyPereiraTests.swift */; };
 		02E80304287FAF1B004987C0 /* BookStore_WesleyPereiraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E80303287FAF1B004987C0 /* BookStore_WesleyPereiraUITests.swift */; };
 		02E80306287FAF1B004987C0 /* BookStore_WesleyPereiraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E80305287FAF1B004987C0 /* BookStore_WesleyPereiraUITestsLaunchTests.swift */; };
+		02E80313287FB3C3004987C0 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E80312287FB3C3004987C0 /* BookStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		02E802FF287FAF1B004987C0 /* BookStore_WesleyPereiraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStore_WesleyPereiraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E80303287FAF1B004987C0 /* BookStore_WesleyPereiraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore_WesleyPereiraUITests.swift; sourceTree = "<group>"; };
 		02E80305287FAF1B004987C0 /* BookStore_WesleyPereiraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore_WesleyPereiraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02E80312287FB3C3004987C0 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				02E802EB287FAF1A004987C0 /* Assets.xcassets */,
 				02E802ED287FAF1A004987C0 /* LaunchScreen.storyboard */,
 				02E802F0287FAF1A004987C0 /* Info.plist */,
+				02E80312287FB3C3004987C0 /* BookStore.swift */,
 			);
 			path = BookStore_WesleyPereira;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E80313287FB3C3004987C0 /* BookStore.swift in Sources */,
 				02E802E7287FAF16004987C0 /* ViewController.swift in Sources */,
 				02E802E3287FAF16004987C0 /* AppDelegate.swift in Sources */,
 				02E802E5287FAF16004987C0 /* SceneDelegate.swift in Sources */,
