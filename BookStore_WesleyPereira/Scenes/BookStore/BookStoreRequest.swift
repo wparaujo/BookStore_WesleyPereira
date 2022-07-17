@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BookStoreRequest: ApiRequest {
+struct BookStoreRequest: ApiRequest {
     typealias Response = BookStoreModel
     
     var method: HTTPMethod {

@@ -16,6 +16,10 @@ class BookStoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetchBookStore()
+        viewModel.bookStore.bind({ books in
+            print(books)
+        })
     }
     
     init(viewModel: BookStoreViewModelProtocol) {

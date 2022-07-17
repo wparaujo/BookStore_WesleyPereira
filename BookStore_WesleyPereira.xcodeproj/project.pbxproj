@@ -21,6 +21,8 @@
 		02E80320287FB94A004987C0 /* BookStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8031F287FB94A004987C0 /* BookStoreViewController.swift */; };
 		02E80323287FBA77004987C0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E80322287FBA77004987C0 /* Observable.swift */; };
 		02E80325287FC6C2004987C0 /* BookStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E80324287FC6C2004987C0 /* BookStoreFactory.swift */; };
+		02E8032728811F7C004987C0 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8032628811F7C004987C0 /* Api.swift */; };
+		02E803292884676F004987C0 /* BookStoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E803282884676F004987C0 /* BookStoreRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		02E8031F287FB94A004987C0 /* BookStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreViewController.swift; sourceTree = "<group>"; };
 		02E80322287FBA77004987C0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		02E80324287FC6C2004987C0 /* BookStoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreFactory.swift; sourceTree = "<group>"; };
+		02E8032628811F7C004987C0 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		02E803282884676F004987C0 /* BookStoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 				02E80316287FB6BE004987C0 /* BookStoreView.swift */,
 				02E8031F287FB94A004987C0 /* BookStoreViewController.swift */,
 				02E80324287FC6C2004987C0 /* BookStoreFactory.swift */,
+				02E803282884676F004987C0 /* BookStoreRequest.swift */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				02E80322287FBA77004987C0 /* Observable.swift */,
+				02E8032628811F7C004987C0 /* Api.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E803292884676F004987C0 /* BookStoreRequest.swift in Sources */,
 				02E8031C287FB77C004987C0 /* CodableView.swift in Sources */,
 				02E80315287FB693004987C0 /* BookStoreViewModel.swift in Sources */,
 				02E80313287FB3C3004987C0 /* BookStoreModel.swift in Sources */,
@@ -312,6 +319,7 @@
 				02E802E3287FAF16004987C0 /* AppDelegate.swift in Sources */,
 				02E802E5287FAF16004987C0 /* SceneDelegate.swift in Sources */,
 				02E80325287FC6C2004987C0 /* BookStoreFactory.swift in Sources */,
+				02E8032728811F7C004987C0 /* Api.swift in Sources */,
 				02E80320287FB94A004987C0 /* BookStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
