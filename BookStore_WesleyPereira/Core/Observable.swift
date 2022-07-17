@@ -10,7 +10,7 @@ import Foundation
 final class Observable<T> {
     var value: T {
         didSet{
-            
+            listener?(value)
         }
     }
     
