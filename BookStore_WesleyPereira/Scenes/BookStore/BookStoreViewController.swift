@@ -7,19 +7,29 @@
 
 import UIKit
 
+protocol BookStoreViewControllerDelegate: AnyObject {
+    func didLoadItems(_ items: [Item])
+}
+
 class BookStoreViewController: UIViewController {
     let viewModel: BookStoreViewModelProtocol
     
+    weak var delegate: BookStoreViewControllerDelegate?
+    private let bookStoreView = BookStoreView()
+    
     override func loadView() {
-        view = BookStoreView()
+        delegate = bookStoreView
+        view = bookStoreView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchBookStore()
-        viewModel.bookStore.bind({ books in
+        viewModel.bookStore.bind({ [weak self] books in
+            self?.delegate?.didLoadItems(books)
             print(books)
         })
+        
     }
     
     init(viewModel: BookStoreViewModelProtocol) {

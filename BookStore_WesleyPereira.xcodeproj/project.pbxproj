@@ -25,6 +25,8 @@
 		02E803292884676F004987C0 /* BookStoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E803282884676F004987C0 /* BookStoreRequest.swift */; };
 		02E8032B288472CD004987C0 /* BookStoreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8032A288472CD004987C0 /* BookStoreViewModelTests.swift */; };
 		02E8032D2884B9E6004987C0 /* BookStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8032C2884B9E6004987C0 /* BookStoreService.swift */; };
+		02E803312884E609004987C0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E803302884E609004987C0 /* TabBarController.swift */; };
+		02E803332884F156004987C0 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E803322884F156004987C0 /* BookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		02E803282884676F004987C0 /* BookStoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreRequest.swift; sourceTree = "<group>"; };
 		02E8032A288472CD004987C0 /* BookStoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreViewModelTests.swift; sourceTree = "<group>"; };
 		02E8032C2884B9E6004987C0 /* BookStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreService.swift; sourceTree = "<group>"; };
+		02E803302884E609004987C0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		02E803322884F156004987C0 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +166,9 @@
 				02E80314287FB693004987C0 /* BookStoreViewModel.swift */,
 				02E8032C2884B9E6004987C0 /* BookStoreService.swift */,
 				02E80316287FB6BE004987C0 /* BookStoreView.swift */,
+				02E803322884F156004987C0 /* BookCollectionViewCell.swift */,
 				02E8031F287FB94A004987C0 /* BookStoreViewController.swift */,
+				02E803302884E609004987C0 /* TabBarController.swift */,
 				02E80324287FC6C2004987C0 /* BookStoreFactory.swift */,
 				02E803282884676F004987C0 /* BookStoreRequest.swift */,
 			);
@@ -317,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02E803292884676F004987C0 /* BookStoreRequest.swift in Sources */,
+				02E803312884E609004987C0 /* TabBarController.swift in Sources */,
 				02E8031C287FB77C004987C0 /* CodableView.swift in Sources */,
 				02E8032D2884B9E6004987C0 /* BookStoreService.swift in Sources */,
 				02E80315287FB693004987C0 /* BookStoreViewModel.swift in Sources */,
@@ -326,6 +333,7 @@
 				02E802E3287FAF16004987C0 /* AppDelegate.swift in Sources */,
 				02E802E5287FAF16004987C0 /* SceneDelegate.swift in Sources */,
 				02E80325287FC6C2004987C0 /* BookStoreFactory.swift in Sources */,
+				02E803332884F156004987C0 /* BookCollectionViewCell.swift in Sources */,
 				02E8032728811F7C004987C0 /* Api.swift in Sources */,
 				02E80320287FB94A004987C0 /* BookStoreViewController.swift in Sources */,
 			);

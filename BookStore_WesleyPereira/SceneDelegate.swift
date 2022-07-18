@@ -17,12 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let initialViewController = BookStoreFactory.make()
-        let navigationController = UINavigationController(
-            rootViewController: initialViewController
-        )
+//        let initialViewController = BookStoreFactory.make()
+//        let navigationController = UINavigationController(
+//            rootViewController: initialViewController
+//        )
         
-        window.rootViewController = navigationController
+        window.rootViewController = TabBarController()
         
         self.window = window
         window.makeKeyAndVisible()

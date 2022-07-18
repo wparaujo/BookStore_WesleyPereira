@@ -8,8 +8,6 @@
 import Foundation
 
 struct BookStoreRequest: ApiRequest {
-    typealias Response = BookStoreModel
-    
     var method: HTTPMethod {
         .get
     }
