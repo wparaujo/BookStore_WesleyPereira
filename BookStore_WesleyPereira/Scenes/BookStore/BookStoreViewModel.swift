@@ -16,9 +16,14 @@ protocol BookStoreViewModelProtocol {
 final class BookStoreViewModel: BookStoreViewModelProtocol {
     var bookStore: Observable<[Item]> = Observable([])
     var error: Observable<Error?> = Observable(nil)
+    private var apiService: BookStoreServicing
+
+    init(apiService: BookStoreServicing) {
+        self.apiService = apiService
+    }
     
     func fetchBookStore() {
-        Api().request(BookStoreRequest()) { result in
+        apiService.fetchBooks { result in
             switch result {
             case .success(let response):
                 self.bookStore.value = response.items

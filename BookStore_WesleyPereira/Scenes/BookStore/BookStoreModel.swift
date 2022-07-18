@@ -8,14 +8,22 @@
 import Foundation
 
 // MARK: - BookStoreModel
-struct BookStoreModel: Codable {
+struct BookStoreModel: Codable, Equatable {
+    static func == (lhs: BookStoreModel, rhs: BookStoreModel) -> Bool {
+        return lhs.kind == rhs.kind && lhs.totalItems == rhs.totalItems && lhs.items == rhs.items
+    }
+    
     let kind: String
     let totalItems: Int
     let items: [Item]
 }
 
 // MARK: - Item
-struct Item: Codable {
+struct Item: Codable, Equatable {
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.kind == rhs.kind
+    }
+    
     let kind: String
     let id, etag: String
     let selfLink: String

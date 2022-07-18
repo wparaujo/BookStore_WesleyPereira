@@ -12,16 +12,12 @@ enum HTTPMethod: String {
 }
 
 protocol ApiRequest {
-    associatedtype Response
-    
     var method: HTTPMethod {get}
     var queryItems: [String: String] { get }
     var headers: [String: String] { get }
     var url: String { get }
     var baseUrl: String { get }
     var path: String { get }
-    
-    func decode(_ data: Data) throws -> Response
 }
 
 extension ApiRequest {
@@ -42,36 +38,38 @@ extension ApiRequest {
     }
 }
 
-extension ApiRequest where Response: Decodable {
-    func decode(_ data: Data) throws -> Response {
-        let decoder = JSONDecoder()
-        return try decoder.decode(Response.self, from: data)
-    }
+protocol Networking {
+    associatedtype Entity
+    
+    func request<Entity: Decodable>(
+        _ request: ApiRequest,
+        urlSession: URLSession,
+        completion: @escaping (Result<Entity, Error>) -> Void)
 }
 
-protocol ApiServicing {
-    func request<Request: ApiRequest>(_ request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void)
-}
+final class Api<Entity: Decodable> {
+    func request(
+        _ request: ApiRequest,
+        urlSession: URLSession = .shared,
+        completion: @escaping (Result<Entity, Error>) -> Void) {
 
-final class Api: ApiServicing {
-    func request<Request: ApiRequest>(_ request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void) {
-        
         guard var urlComponent = URLComponents(string: request.url) else { return }
         let queryItems = request.queryItems.map { URLQueryItem(name: $0, value: $1) }
         urlComponent.queryItems = queryItems
         
-        guard let url = urlComponent.url else { return }
+            guard let url = urlComponent.url else { return }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.allHTTPHeaderFields = request.headers
         
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+        urlSession.dataTask(with: urlRequest) { data, response, error in
             if let error = error { completion(.failure(error)) }
             
             guard let data = data else { return completion(.failure(NSError())) }
             
             do {
-                try completion(.success(request.decode(data)))
+                let response = try JSONDecoder().decode(Entity.self, from: data)
+                completion(.success(response))
             } catch let error as NSError {
                 completion(.failure(error))
             }

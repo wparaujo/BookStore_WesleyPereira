@@ -10,7 +10,8 @@ import UIKit
 
 final class BookStoreFactory {
     static func make() -> UIViewController {
-        let viewModel = BookStoreViewModel()
+        let service = BookStoreService()
+        let viewModel = BookStoreViewModel(apiService: service)
         let viewController = BookStoreViewController(
             viewModel: viewModel
         )
