@@ -141,6 +141,7 @@
 				02E80318287FB720004987C0 /* Scenes */,
 				02E802E2287FAF16004987C0 /* AppDelegate.swift */,
 				02E802E4287FAF16004987C0 /* SceneDelegate.swift */,
+				02E803302884E609004987C0 /* TabBarController.swift */,
 				02E802EB287FAF1A004987C0 /* Assets.xcassets */,
 				02E802ED287FAF1A004987C0 /* LaunchScreen.storyboard */,
 				02E802F0287FAF1A004987C0 /* Info.plist */,
@@ -180,13 +181,11 @@
 		02E80319287FB72B004987C0 /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
+				02E8034A288687B0004987C0 /* View */,
 				02E8033428851ECD004987C0 /* CollectionView */,
 				02E80312287FB3C3004987C0 /* BookStoreModel.swift */,
 				02E80314287FB693004987C0 /* BookStoreViewModel.swift */,
 				02E8032C2884B9E6004987C0 /* BookStoreService.swift */,
-				02E80316287FB6BE004987C0 /* BookStoreView.swift */,
-				02E8031F287FB94A004987C0 /* BookStoreViewController.swift */,
-				02E803302884E609004987C0 /* TabBarController.swift */,
 				02E80324287FC6C2004987C0 /* BookStoreFactory.swift */,
 				02E803282884676F004987C0 /* BookStoreRequest.swift */,
 			);
@@ -243,6 +242,15 @@
 				02E803482886868C004987C0 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		02E8034A288687B0004987C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02E80316287FB6BE004987C0 /* BookStoreView.swift */,
+				02E8031F287FB94A004987C0 /* BookStoreViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
