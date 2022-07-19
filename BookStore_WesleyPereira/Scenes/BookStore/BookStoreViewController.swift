@@ -19,6 +19,7 @@ class BookStoreViewController: UIViewController {
     
     override func loadView() {
         delegate = bookStoreView
+        bookStoreView.delegate = self
         view = bookStoreView
     }
 
@@ -40,5 +41,16 @@ class BookStoreViewController: UIViewController {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension BookStoreViewController: BookStoreViewDelegate {
+    func didTapItem(_ item: Item) {
+        navigationController?.pushViewController(
+            BookDetailViewController(
+                item: item
+            ),
+            animated: true
+        )
     }
 }

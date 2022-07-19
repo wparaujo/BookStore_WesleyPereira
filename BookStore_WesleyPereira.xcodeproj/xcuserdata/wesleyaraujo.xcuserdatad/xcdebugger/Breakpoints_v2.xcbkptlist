@@ -7,80 +7,111 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B08E5FB8-CCA9-40C0-B4C3-5D8348247B4D"
+            uuid = "A5375C1D-BC8D-49F6-9F71-37D036C386C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookStore_WesleyPereiraTests/BookCollectionViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "test_requestImage_whenIsSuccesul_shouldGetData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A5375C1D-BC8D-49F6-9F71-37D036C386C4 - 4b172d830a5b7011"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BookStore_WesleyPereiraTests.BookCollectionViewModelTests.test_requestImage_whenIsSuccesul_shouldGetData() throws -&gt; ()"
+                  moduleName = "BookStore_WesleyPereiraTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wesleyaraujo/Documents/projetos/BookStore_WesleyPereira/BookStore_WesleyPereiraTests/BookCollectionViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "415">
+               </Location>
+               <Location
+                  uuid = "A5375C1D-BC8D-49F6-9F71-37D036C386C4 - 4b172d830a5b7072"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BookStore_WesleyPereiraTests.BookCollectionViewModelTests.test_requestImage_whenIsSuccesul_shouldGetData() throws -&gt; ()"
+                  moduleName = "BookStore_WesleyPereiraTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wesleyaraujo/Documents/projetos/BookStore_WesleyPereira/BookStore_WesleyPereiraTests/BookCollectionViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "415">
+               </Location>
+               <Location
+                  uuid = "A5375C1D-BC8D-49F6-9F71-37D036C386C4 - 4b172d830a5b7053"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BookStore_WesleyPereiraTests.BookCollectionViewModelTests.test_requestImage_whenIsSuccesul_shouldGetData() throws -&gt; ()"
+                  moduleName = "BookStore_WesleyPereiraTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wesleyaraujo/Documents/projetos/BookStore_WesleyPereira/BookStore_WesleyPereiraTests/BookCollectionViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "415">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "33F7556A-DBE9-4A26-A1D2-C526331AC3DE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BookStore_WesleyPereira/Scenes/BookStore/CollectionView/BookCollectionViewModel.swift"
+            filePath = "BookStore_WesleyPereira/Scenes/BookDetail/BookDetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "fetchImage(from:)"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "didTapBuyBook()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D34555CB-149C-4FE7-ACD9-0CE30391A22A"
+            uuid = "6F1BA043-2062-41C5-8CA7-A10DCA3B0A3A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BookStore_WesleyPereira/Scenes/BookStore/CollectionView/BookCollectionViewModel.swift"
+            filePath = "BookStore_WesleyPereira/Scenes/BookDetail/BookDetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "fetchImage(from:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "didTapBuyBook()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B9C34F91-E517-4607-BDBD-E43978E88DE5"
-            shouldBeEnabled = "Yes"
+            uuid = "7F1C7939-7F5D-4B70-8F0A-B582CA48E4CC"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BookStore_WesleyPereira/Scenes/BookStore/CollectionView/BookCollectionViewModel.swift"
+            filePath = "BookStore_WesleyPereira/Scenes/BookDetail/BookDetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "fetchImage(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E741142D-34F0-4EB3-AD18-6ADEABFE55A9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookStore_WesleyPereira/Scenes/BookStore/CollectionView/BookCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "loadData(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A904417-81CE-4E0D-B7B0-C72BBCC45498"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookStore_WesleyPereira/Scenes/BookStore/CollectionView/BookCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "loadData(from:)"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "didReceiveItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

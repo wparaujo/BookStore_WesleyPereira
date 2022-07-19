@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BookStoreViewDelegate: AnyObject {
-    func didLoadItems(_ items: [Item])
+    func didTapItem(_ item: Item)
 }
 
 final class BookStoreView: UIView {
@@ -66,7 +66,7 @@ extension BookStoreView: CodableView {
         collectionView.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: "\(BookCollectionViewCell.self)")
     }
 }
-extension BookStoreView: UICollectionViewDataSource, UICollectionViewDelegate {
+extension BookStoreView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         books.count
     }
@@ -85,6 +85,14 @@ extension BookStoreView: BookStoreViewControllerDelegate {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
+    }
+}
+
+extension BookStoreView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let controller = BookDetailViewController()
+        let book = books[indexPath.row]
+        delegate?.didTapItem(book)
     }
 }
 
