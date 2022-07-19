@@ -16,9 +16,19 @@ class TabBarController: UITabBarController {
         let navigationController = UINavigationController(
             rootViewController: initialViewController
         )
+        
+        let favoriteViewController = FavoriteBookViewController()
+        let favoriteNavigationController = UINavigationController(
+            rootViewController: favoriteViewController
+        )
+        
         navigationController.tabBarItem.title = "home"
         navigationController.tabBarItem.image = .init(systemName: "house")
-        viewControllers = [navigationController]
+        
+        favoriteNavigationController.tabBarItem.title = "favorites"
+        favoriteNavigationController.tabBarItem.image = .init(systemName: "star.fill")
+        
+        viewControllers = [navigationController, favoriteNavigationController]
     }
 
 }

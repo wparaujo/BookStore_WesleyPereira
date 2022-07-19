@@ -30,6 +30,7 @@
 		02E8033628851EF9004987C0 /* BookCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8033528851EF9004987C0 /* BookCollectionViewModel.swift */; };
 		02E8033828851F72004987C0 /* BookCollectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8033728851F72004987C0 /* BookCollectionService.swift */; };
 		02E8033A2885224E004987C0 /* BookCollectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E803392885224E004987C0 /* BookCollectionFactory.swift */; };
+		02E8033D28864CD3004987C0 /* FavoriteBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8033C28864CD3004987C0 /* FavoriteBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		02E8033528851EF9004987C0 /* BookCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewModel.swift; sourceTree = "<group>"; };
 		02E8033728851F72004987C0 /* BookCollectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionService.swift; sourceTree = "<group>"; };
 		02E803392885224E004987C0 /* BookCollectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionFactory.swift; sourceTree = "<group>"; };
+		02E8033C28864CD3004987C0 /* FavoriteBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		02E80318287FB720004987C0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				02E8033B28864CA0004987C0 /* FavoritesBook */,
 				02E80319287FB72B004987C0 /* BookStore */,
 			);
 			path = Scenes;
@@ -207,6 +210,14 @@
 				02E8033728851F72004987C0 /* BookCollectionService.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		02E8033B28864CA0004987C0 /* FavoritesBook */ = {
+			isa = PBXGroup;
+			children = (
+				02E8033C28864CD3004987C0 /* FavoriteBookViewController.swift */,
+			);
+			path = FavoritesBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				02E803332884F156004987C0 /* BookCollectionViewCell.swift in Sources */,
 				02E8032728811F7C004987C0 /* Api.swift in Sources */,
 				02E8033828851F72004987C0 /* BookCollectionService.swift in Sources */,
+				02E8033D28864CD3004987C0 /* FavoriteBookViewController.swift in Sources */,
 				02E80320287FB94A004987C0 /* BookStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
