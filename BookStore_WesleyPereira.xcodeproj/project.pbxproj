@@ -27,6 +27,9 @@
 		02E8032D2884B9E6004987C0 /* BookStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8032C2884B9E6004987C0 /* BookStoreService.swift */; };
 		02E803312884E609004987C0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E803302884E609004987C0 /* TabBarController.swift */; };
 		02E803332884F156004987C0 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E803322884F156004987C0 /* BookCollectionViewCell.swift */; };
+		02E8033628851EF9004987C0 /* BookCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8033528851EF9004987C0 /* BookCollectionViewModel.swift */; };
+		02E8033828851F72004987C0 /* BookCollectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8033728851F72004987C0 /* BookCollectionService.swift */; };
+		02E8033A2885224E004987C0 /* BookCollectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E803392885224E004987C0 /* BookCollectionFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		02E8032C2884B9E6004987C0 /* BookStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreService.swift; sourceTree = "<group>"; };
 		02E803302884E609004987C0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		02E803322884F156004987C0 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		02E8033528851EF9004987C0 /* BookCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewModel.swift; sourceTree = "<group>"; };
+		02E8033728851F72004987C0 /* BookCollectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionService.swift; sourceTree = "<group>"; };
+		02E803392885224E004987C0 /* BookCollectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,11 +168,11 @@
 		02E80319287FB72B004987C0 /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
+				02E8033428851ECD004987C0 /* CollectionView */,
 				02E80312287FB3C3004987C0 /* BookStoreModel.swift */,
 				02E80314287FB693004987C0 /* BookStoreViewModel.swift */,
 				02E8032C2884B9E6004987C0 /* BookStoreService.swift */,
 				02E80316287FB6BE004987C0 /* BookStoreView.swift */,
-				02E803322884F156004987C0 /* BookCollectionViewCell.swift */,
 				02E8031F287FB94A004987C0 /* BookStoreViewController.swift */,
 				02E803302884E609004987C0 /* TabBarController.swift */,
 				02E80324287FC6C2004987C0 /* BookStoreFactory.swift */,
@@ -190,6 +196,17 @@
 				02E8032628811F7C004987C0 /* Api.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		02E8033428851ECD004987C0 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				02E803322884F156004987C0 /* BookCollectionViewCell.swift */,
+				02E8033528851EF9004987C0 /* BookCollectionViewModel.swift */,
+				02E803392885224E004987C0 /* BookCollectionFactory.swift */,
+				02E8033728851F72004987C0 /* BookCollectionService.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E8033628851EF9004987C0 /* BookCollectionViewModel.swift in Sources */,
 				02E803292884676F004987C0 /* BookStoreRequest.swift in Sources */,
 				02E803312884E609004987C0 /* TabBarController.swift in Sources */,
 				02E8031C287FB77C004987C0 /* CodableView.swift in Sources */,
@@ -332,9 +350,11 @@
 				02E80317287FB6BE004987C0 /* BookStoreView.swift in Sources */,
 				02E802E3287FAF16004987C0 /* AppDelegate.swift in Sources */,
 				02E802E5287FAF16004987C0 /* SceneDelegate.swift in Sources */,
+				02E8033A2885224E004987C0 /* BookCollectionFactory.swift in Sources */,
 				02E80325287FC6C2004987C0 /* BookStoreFactory.swift in Sources */,
 				02E803332884F156004987C0 /* BookCollectionViewCell.swift in Sources */,
 				02E8032728811F7C004987C0 /* Api.swift in Sources */,
+				02E8033828851F72004987C0 /* BookCollectionService.swift in Sources */,
 				02E80320287FB94A004987C0 /* BookStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

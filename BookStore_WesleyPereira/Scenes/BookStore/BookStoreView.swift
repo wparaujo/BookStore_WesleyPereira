@@ -72,8 +72,9 @@ extension BookStoreView: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(BookCollectionViewCell.self)", for: indexPath)
-        cell.backgroundColor = .blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(BookCollectionViewCell.self)", for: indexPath) as? BookCollectionViewCell
+        guard let cell = cell else { return UICollectionViewCell() }
+        cell.configure(withItem: books[indexPath.row])
         return cell
     }
 }
@@ -93,9 +94,7 @@ extension BookStoreView: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        let flowlayout = collectionViewLayout as? UICollectionViewFlowLayout
-        let space: CGFloat = (flowlayout?.minimumInteritemSpacing ?? 0.0) + (flowlayout?.sectionInset.left ?? 0.0) + (flowlayout?.sectionInset.right ?? 0.0)
-        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        let size = (collectionView.frame.size.width - 30) / 2
         return CGSize(width: size, height: size)
     }
 }
