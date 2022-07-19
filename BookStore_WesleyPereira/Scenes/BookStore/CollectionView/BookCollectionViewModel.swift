@@ -11,34 +11,32 @@ protocol BookCollectionViewModelProtocol {
     var observableSuccess: Observable<Data?> { get }
     var observableError: Observable<Error?> { get }
     
-    func fetchImage(from url: URL)
+    func fetchImage(from url: URL, completion: ((Data?, URLResponse?, Error?) -> Void)?)
+}
+
+extension BookCollectionViewModelProtocol {
+    func fetchImage(from url: URL, completion: ((Data?, URLResponse?, Error?) -> Void)? = nil) {
+        fetchImage(from: url, completion: completion)
+    }
 }
 
 final class BookCollectionViewModel: BookCollectionViewModelProtocol {
     var observableSuccess: Observable<Data?> = Observable(nil)
     var observableError: Observable<Error?> = Observable(nil)
-    
-    private let service: BookCollectionServicing
-    
-    init(service: BookCollectionServicing) {
-        self.service = service
+    private let session: URLSession
+        
+    init(session: URLSession = .shared) {
+        self.session = session
     }
     
-    func fetchImage(from url: URL) {
-        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let data = data else {
-                self?.observableError.value = NSError(domain: "", code: 404, userInfo: [:])
-                return
-            }
-
+    func fetchImage(from url: URL, completion: ((Data?, URLResponse?, Error?) -> Void)?) {
+        session.dataTask(with: url) { [weak self] data, response, error in
             if let error = error {
                 self?.observableError.value = error
             }
             
             self?.observableSuccess.value = data
-//            self?.service.fetchImage(from: url) { [weak self] data, response, error in
-                
-//            }
+            completion?(data, response, error)
         }.resume()
     }
 }

@@ -10,8 +10,7 @@ import UIKit
 
 enum BookCollectionConfigurator {
     static func configure(_ cell: BookCollectionViewCell?, item: Item) {
-        let service = BookCollectionService()
-        let viewModel = BookCollectionViewModel(service: service)
+        let viewModel = BookCollectionViewModel()
         cell?.viewModel = viewModel
         guard let url = URL(string: item.volumeInfo.imageLinks.thumbnail) else { return }
         cell?.loadData(from: url)
