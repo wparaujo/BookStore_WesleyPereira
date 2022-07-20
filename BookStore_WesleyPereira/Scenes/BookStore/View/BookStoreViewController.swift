@@ -46,10 +46,9 @@ class BookStoreViewController: UIViewController {
 
 extension BookStoreViewController: BookStoreViewDelegate {
     func didTapItem(_ item: Item) {
+        let bookDetailScreen = BookDetailFactory.make(withItem: item)
         navigationController?.pushViewController(
-            BookDetailViewController(
-                item: item
-            ),
+            bookDetailScreen,
             animated: true
         )
     }

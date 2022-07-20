@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol BookDetailViewDelegate: AnyObject {
+    func didTapSaveFavoriteButton()
+}
+
 extension BookDetailView.LayoutSize {
     enum ContentView {
         static let proportionalWidth = 0.9
@@ -21,6 +25,8 @@ final class BookDetailView: UIView {
     fileprivate enum LayoutSize {}
     
     private var item: Item?
+    
+    weak var delegate: BookDetailViewDelegate?
     
     private lazy var contentStatckView: UIStackView = {
         let view = UIStackView()
@@ -63,6 +69,15 @@ final class BookDetailView: UIView {
         return button
     }()
     
+    private lazy var favoriteButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Favorite", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapSaveFavorite), for: .touchUpInside)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         buildLayout()
@@ -81,6 +96,11 @@ final class BookDetailView: UIView {
         }
         UIApplication.shared.open(url)
     }
+    
+    @objc
+    private func didTapSaveFavorite() {
+        delegate?.didTapSaveFavoriteButton()
+    }
 }
 
 extension BookDetailView: CodableView {
@@ -91,6 +111,7 @@ extension BookDetailView: CodableView {
         contentStatckView.addArrangedSubview(authorLabel)
         contentStatckView.addArrangedSubview(descriptionLabel)
         contentStatckView.addArrangedSubview(buyButton)
+        contentStatckView.addArrangedSubview(favoriteButton)
     }
     
     func setupConstraints() {
@@ -99,7 +120,9 @@ extension BookDetailView: CodableView {
             contentStatckView.centerYAnchor.constraint(equalTo: centerYAnchor),
             contentStatckView.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            buyButton.heightAnchor.constraint(equalToConstant: LayoutSize.Button.heightButton)
+            buyButton.heightAnchor.constraint(equalToConstant: LayoutSize.Button.heightButton),
+            
+            favoriteButton.heightAnchor.constraint(equalToConstant: LayoutSize.Button.heightButton)
         ])
     }
     

@@ -14,17 +14,20 @@ protocol BookDetailViewControllerDelegate: AnyObject {
 class BookDetailViewController: UIViewController {
     private let bookDetailView = BookDetailView()
     private let item: Item
+    private let viewModel: BookDetailViewModel
     
     weak var delegate: BookDetailViewControllerDelegate?
     
     override func loadView() {
+        bookDetailView.delegate = self
         view = bookDetailView
     }
     
-    init(item: Item) {
+    init(item: Item, viewModel: BookDetailViewModel) {
         self.item = item
         delegate = bookDetailView
         delegate?.didReceiveItem(item)
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,8 +38,11 @@ class BookDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+}
 
+extension BookDetailViewController: BookDetailViewDelegate {
+    func didTapSaveFavoriteButton() {
+        viewModel.saveItem(item)
+    }
 }

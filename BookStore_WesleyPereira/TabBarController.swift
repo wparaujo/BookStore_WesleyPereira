@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
             rootViewController: initialViewController
         )
         
-        let favoriteViewController = FavoriteBookViewController()
+        let favoriteViewController = FavoriteBookFactory.make()
         let favoriteNavigationController = UINavigationController(
             rootViewController: favoriteViewController
         )
