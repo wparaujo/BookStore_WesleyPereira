@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 protocol BookStoreServicing {
-    func fetchBooks(completion: @escaping (Result<BookStoreModel, Error>) -> Void)
+    func fetchBooks(pageIndex: Int, completion: @escaping (Result<BookStoreModel, Error>) -> Void)
 }
 
 class BookStoreService: BookStoreServicing {
-    func fetchBooks(completion: @escaping (Result<BookStoreModel, Error>) -> Void) {
-        Api<BookStoreModel>().request(BookStoreRequest()) { result in
+    func fetchBooks(pageIndex: Int, completion: @escaping (Result<BookStoreModel, Error>) -> Void) {
+        Api<BookStoreModel>().request(BookStoreRequest(pageIndex: pageIndex)) { result in
             switch result {
             case .success(let response):
                 completion(.success(response))

@@ -16,6 +16,7 @@ class BookStoreViewController: UIViewController {
     
     weak var delegate: BookStoreViewControllerDelegate?
     private let bookStoreView = BookStoreView()
+    private var pageIndex = 0
     
     override func loadView() {
         delegate = bookStoreView
@@ -25,7 +26,7 @@ class BookStoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchBookStore()
+        viewModel.fetchBookStore(pageIndex: 0)
         viewModel.bookStore.bind({ [weak self] books in
             self?.delegate?.didLoadItems(books)
             print(books)
@@ -51,5 +52,10 @@ extension BookStoreViewController: BookStoreViewDelegate {
             bookDetailScreen,
             animated: true
         )
+    }
+    
+    func didFinishScroll() {
+        pageIndex += 1
+        viewModel.fetchBookStore(pageIndex: pageIndex)
     }
 }

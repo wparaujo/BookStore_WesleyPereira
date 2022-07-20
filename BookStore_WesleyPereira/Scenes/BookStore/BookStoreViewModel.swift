@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BookStoreViewModelProtocol {
-    func fetchBookStore()
+    func fetchBookStore(pageIndex: Int)
     var bookStore: Observable<[Item]> { get set }
     var error: Observable<Error?> { get set }
 }
@@ -22,8 +22,8 @@ final class BookStoreViewModel: BookStoreViewModelProtocol {
         self.apiService = apiService
     }
     
-    func fetchBookStore() {
-        apiService.fetchBooks { result in
+    func fetchBookStore(pageIndex: Int) {
+        apiService.fetchBooks(pageIndex: pageIndex) { result in
             switch result {
             case .success(let response):
                 self.bookStore.value = response.items

@@ -9,6 +9,7 @@ import UIKit
 
 protocol BookStoreViewDelegate: AnyObject {
     func didTapItem(_ item: Item)
+    func didFinishScroll()
 }
 
 final class BookStoreView: UIView {
@@ -81,7 +82,7 @@ extension BookStoreView: UICollectionViewDataSource {
 
 extension BookStoreView: BookStoreViewControllerDelegate {
     func didLoadItems(_ items: [Item]) {
-        books = items
+        books.append(contentsOf: items)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
@@ -90,9 +91,14 @@ extension BookStoreView: BookStoreViewControllerDelegate {
 
 extension BookStoreView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let controller = BookDetailViewController()
         let book = books[indexPath.row]
         delegate?.didTapItem(book)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == books.count - 1 {
+            delegate?.didFinishScroll()
+        }
     }
 }
 

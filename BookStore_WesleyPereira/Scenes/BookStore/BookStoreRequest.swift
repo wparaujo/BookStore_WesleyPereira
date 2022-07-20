@@ -8,6 +8,12 @@
 import Foundation
 
 struct BookStoreRequest: ApiRequest {
+    private let pageIndex: Int
+    
+    init(pageIndex: Int = 0) {
+        self.pageIndex = pageIndex
+    }
+    
     var method: HTTPMethod {
         .get
     }
@@ -20,7 +26,7 @@ struct BookStoreRequest: ApiRequest {
         [
             "q": "ios",
             "maxResults": "20",
-            "startIndex": "0"
+            "startIndex": "\(pageIndex)"
         ]
     }
 }
